@@ -1,5 +1,5 @@
 
-package com.mendez.examen;
+package com.mycompany.proyectomaven;
 
 /**
  *
@@ -13,7 +13,7 @@ public class Producto {
     public Producto(String nombre, double precio, int cantidad) {
         // Validaciones básicas solicitadas en el commit
         if (nombre == null || nombre.trim().isEmpty()) {
-            throw new IllegalArgumentException("El nombre no puede estar vacío");
+            throw new IllegalArgumentException("El nombre no puede estar vacio");
         }
         if (precio < 0) {
             throw new IllegalArgumentException("El precio no puede ser negativo");

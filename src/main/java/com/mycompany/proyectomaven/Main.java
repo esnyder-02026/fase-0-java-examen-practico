@@ -1,5 +1,5 @@
 
-package com.mendez.examen;
+package com.mycompany.proyectomaven;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ public class Main {
         Inventario miInventario = new Inventario();
         boolean continuar = true;
 
-        System.out.println("--- BIENVENIDO AL SISTEMA DE GESTIÓN ---");
+        System.out.println("--- BIENVENIDO AL SISTEMA DE GESTION ---");
 
         while (continuar) {
             try {
@@ -17,7 +17,7 @@ public class Main {
                 System.out.println("2. Mostrar Inventario");
                 System.out.println("3. Buscar Producto");
                 System.out.println("4. Salir");
-                System.out.print("Seleccione una opción: ");
+                System.out.print("Seleccione una opcion: ");
                 
                 // Usamos Integer.parseInt para evitar problemas con el buffer del Scanner
                 int opcion = Integer.parseInt(sc.nextLine());
@@ -32,7 +32,7 @@ public class Main {
                         int cantidad = Integer.parseInt(sc.nextLine());
                         
                         miInventario.agregar(new Producto(nombre, precio, cantidad));
-                        System.out.println("¡Producto agregado con éxito!");
+                        System.out.println("¡Producto agregado con exito!");
                         break;
 
                     case 2:
@@ -57,14 +57,14 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("Opción no válida, intente de nuevo.");
+                        System.out.println("Opción no valida, intente de nuevo.");
                 }
             } catch (NumberFormatException e) {
-                System.out.println("ERROR: Debes ingresar un número válido. Intenta otra vez.");
+                System.out.println("ERROR: Debes ingresar un numero valido. Intenta otra vez.");
             } catch (IllegalArgumentException e) {
-                System.out.println("ERROR DE VALIDACIÓN: " + e.getMessage());
+                System.out.println("ERROR DE VALIDACION: " + e.getMessage());
             } catch (Exception e) {
-                System.out.println("Ocurrió un error inesperado: " + e.getMessage());
+                System.out.println("Ocurrio un error inesperado: " + e.getMessage());
             }
         }
         sc.close();
