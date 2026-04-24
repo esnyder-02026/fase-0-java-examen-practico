@@ -1,5 +1,5 @@
 
-package com.mycompany.proyectomaven;
+package com.mendez.examen;
 
 /**
  *
